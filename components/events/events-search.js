@@ -9,14 +9,14 @@ const EventsSearch = (props) => {
   function submitHandler(event) {
     event.preventDefault();
 
-    const slecetedMonth = monthInputRefInputRef.current.value;
+    const slecetedMonth = monthInputRef.current.value;
     const slecetedYear = yearInputRef.current.value;
 
     props.onSearch(slecetedMonth, slecetedYear)
   }
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={submitHandler}>
       <div className={styles.controls}>
         <div className={styles.control}>
           <label htmlFor="year">Year</label>
@@ -43,7 +43,7 @@ const EventsSearch = (props) => {
           </select>
         </div>
       </div>
-      <Button>Find Events</Button>
+      <Button >Find Events</Button>
     </form>
   );
 };
