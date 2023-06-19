@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Button from "../ui/button";
-import styles from "./events-search.module.css";
+import classes from "./events-search.module.css";
 
 const EventsSearch = (props) => {
   const yearInputRef = useRef();
@@ -16,16 +16,16 @@ const EventsSearch = (props) => {
   }
 
   return (
-    <form className={styles.form} onSubmit={submitHandler}>
-      <div className={styles.controls}>
-        <div className={styles.control}>
+    <form className={classes.form} onSubmit={submitHandler}>
+      <div className={classes.controls}>
+        <div className={classes.control}>
           <label htmlFor="year">Year</label>
           <select id="year" ref={yearInputRef}>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
         </div>
-        <div className={styles.control}>
+        <div className={classes.control}>
           <label htmlFor="month">Month</label>
           <select id="month" ref={monthInputRef}>
             <option value="1">January</option>
